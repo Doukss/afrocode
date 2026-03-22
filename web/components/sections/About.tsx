@@ -36,7 +36,7 @@ export default function About() {
               </div>
             </div>
             <p className="text-gray-500 text-2xl font-extralight">
-              Travailler avec le coeur, créer avec l'esprit.
+              Travailler avec le cœur , créer avec l'esprit.
             </p>
           </div>
 

@@ -1,6 +1,6 @@
 export default function Specialite() {
   return (
-    <section className="bg-[#000f1f] w-full h-screen">
+    <section className="bg-gradient-to-br from-[#000f1f] via-[#021a35] to-[#000f1f] w-full h-screen">
       <div className="flex items-center justify-center p-10">
         <h1 className="text-lg font-extrabold text-gray-600">
           Ce que je préfère résoudre

@@ -4,6 +4,8 @@ import About from "@/components/sections/About";
 import Specialite from "@/components/sections/Specialite";
 import MagicRings from "@/components/sections/Sologan"
 import Skils from "@/components/sections/Skils";
+import Projets from "@/components/sections/Projets"
+
 
 export default function Home() {
   return (
@@ -13,6 +15,7 @@ export default function Home() {
       <Specialite/>
       <MagicRings/>
       <Skils/>
+      <Projets/>
     </div>
   );
 }
