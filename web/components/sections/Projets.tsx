@@ -1,24 +1,24 @@
 "use client";
+
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-// Exemple de projets avec images
 const projects = [
   {
     id: 1,
     title: "Gestion de stock",
-    description: "Application web avec gestion complète des produits",
+    description: "Application web complète avec gestion des produits",
     category: "Fullstack",
-    tech: ["JS", "Tailwind"],
-    image: "/images/milk.png", // mettre le chemin de ton image
+    tech: ["Tailwind", "Cloudinary", "TypeScript", "Next", "Prisma"],
+    image: "/sk.jpg",
   },
   {
     id: 2,
     title: "API Produits",
-    description: "API REST performante avec Node.js",
+    description: "API REST performante avec Node.js et Prisma",
     category: "Backend",
     tech: ["Node.js", "Prisma"],
-    image: "/images/api.png",
+    image: "/api.jpg",
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const projects = [
     description: "Interface moderne et responsive",
     category: "Frontend",
     tech: ["React", "Tailwind"],
-    image: "/images/dashboard.png",
+    image: "/dash.jpg",
   },
 ];
 
@@ -42,7 +42,7 @@ export default function Projets() {
 
   return (
     <section className="relative w-full min-h-screen px-6 py-16 bg-gradient-to-br from-[#000814] via-[#001d3d] to-[#003566]">
-      {/* Glow background */}
+      {/* Background glow */}
       <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500 opacity-20 blur-3xl rounded-full"></div>
       <div className="absolute bottom-20 right-20 w-72 h-72 bg-purple-500 opacity-20 blur-3xl rounded-full"></div>
 
@@ -73,7 +73,7 @@ export default function Projets() {
         ))}
       </div>
 
-      {/* Cartes */}
+      {/* Grid */}
       <motion.div
         layout
         className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10"
@@ -88,31 +88,31 @@ export default function Projets() {
               exit={{ opacity: 0, scale: 0.8 }}
               transition={{ duration: 0.4 }}
               whileHover={{ scale: 1.05 }}
-              className="relative group rounded-2xl p-[1px] bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"
+              className="relative group rounded-2xl p-[1px] bg-gradient-to-r from-blue-900 via-purple-700 to-pink-400"
             >
-              {/* Card content */}
-              <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 h-full border border-white/10 flex flex-col">
-                {/* Image */}
-                {project.image && (
-                  <div className="mb-4 rounded-xl overflow-hidden">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
-                )}
+              {/* Card */}
+              <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-5 h-full border border-white/10 flex flex-col">
+                {/* IMAGE */}
+                <div className="mb-4 rounded-xl overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                </div>
 
-                <h3 className="text-2xl font-semibold text-white mb-2 relative z-10">
+                {/* TITLE */}
+                <h3 className="text-xl font-semibold text-white mb-2">
                   {project.title}
                 </h3>
 
-                <p className="text-gray-300 mb-4 relative z-10">
+                {/* DESCRIPTION */}
+                <p className="text-gray-300 text-sm mb-4">
                   {project.description}
                 </p>
 
-                {/* Tech */}
-                <div className="flex flex-wrap gap-2 mb-4 relative z-10">
+                {/* TECH TAGS */}
+                <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((t, i) => (
                     <span
                       key={i}
@@ -123,8 +123,8 @@ export default function Projets() {
                   ))}
                 </div>
 
-                {/* Actions */}
-                <div className="flex gap-3 mt-auto relative z-10">
+                {/* BUTTONS */}
+                <div className="flex gap-3 mt-auto">
                   <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-lg text-sm hover:opacity-90">
                     Voir projet
                   </button>
@@ -133,6 +133,9 @@ export default function Projets() {
                   </button>
                 </div>
               </div>
+
+              {/* Glow hover */}
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 blur-xl"></div>
             </motion.div>
           ))}
         </AnimatePresence>

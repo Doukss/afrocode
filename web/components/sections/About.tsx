@@ -3,6 +3,7 @@ import ProfileCard from "../ui/ProfileCard";
 export default function About() {
   return (
     <section className="bg-[#000f1f] w-full h-screen flex items-center justify-center">
+      
       <div className="w-[90%] h-[90%] rounded-2xl border-4 border-[#6818A5] shadow-[0_0_40px_#6818A5]">
         <div className="flex justify-around items-center h-full">
           <div className="w-lg">

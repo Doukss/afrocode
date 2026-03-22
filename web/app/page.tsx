@@ -5,6 +5,10 @@ import Specialite from "@/components/sections/Specialite";
 import MagicRings from "@/components/sections/Sologan"
 import Skils from "@/components/sections/Skils";
 import Projets from "@/components/sections/Projets"
+import Experience from "@/components/sections/Experience "
+import CTA from "@/components/sections/CTA "
+import Contact from "@/components/sections/Contact";
+import Footer from "@/components/sections/Footer";
 
 
 export default function Home() {
@@ -16,6 +20,10 @@ export default function Home() {
       <MagicRings/>
       <Skils/>
       <Projets/>
+      <Experience />
+      <CTA />
+      <Contact />
+      <Footer />
     </div>
   );
 }
