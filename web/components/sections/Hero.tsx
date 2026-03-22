@@ -32,7 +32,7 @@ export default function Hero() {
           <button className="px-6 py-3 rounded-lg bg-white text-black font-extrabold hover:scale-105 transition">
             Voir mes projets →
           </button>
-          <button className="px-6 py-3 rounded-lg border border-gray-600 hover:bg-white/10 transition">
+          <button id="#contact" className="px-6 py-3 rounded-lg border border-gray-600 hover:bg-white/10 transition" >
             Me contacter
           </button>
         </div>
