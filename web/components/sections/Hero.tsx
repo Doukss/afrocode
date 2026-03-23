@@ -13,30 +13,37 @@ export default function Hero() {
         />
       </div>
 
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center">
-        <h1 className="text-9xl font-extrabold mb-4 ">
-          Malick Mbodji
-        </h1>
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4 py-16">
+  
+  {/* NOM */}
+  <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-extrabold mb-4 leading-tight">
+    Malick Mbodji
+  </h1>
 
-        <p className="mt-2 text-lg md:text-xl text-white font-semibold">
-          Développeur Full Stack · Architecte SaaS · Créateur d’expériences
-          digitales
-        </p>
+  {/* TITRE */}
+  <p className="mt-2 text-sm sm:text-base md:text-xl font-semibold max-w-xl">
+    Développeur Full Stack · Architecte SaaS · Créateur d’expériences digitales
+  </p>
 
-        <p className="mt-6 max-w-2xl text-white text-lg md:text-xl font-light">
-          Je transforme des idées complexes en expériences web fluides —
-          innovation et performance au service de votre vision.
-        </p>
+  {/* DESCRIPTION */}
+  <p className="mt-6 max-w-xl md:max-w-2xl text-sm sm:text-base md:text-xl font-light leading-relaxed">
+    Je transforme des idées complexes en expériences web fluides —
+    innovation et performance au service de votre vision.
+  </p>
 
-        <div className="mt-8 flex gap-4">
-          <button className="px-6 py-3 rounded-lg bg-white text-black font-extrabold hover:scale-105 transition">
-            Voir mes projets →
-          </button>
-          <button id="#contact" className="px-6 py-3 rounded-lg border border-gray-600 hover:bg-white/10 transition" >
-            Me contacter
-          </button>
-        </div>
-      </div>
+  {/* BOUTONS */}
+  <div className="mt-8 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+    
+    <button className="w-full sm:w-auto px-6 py-3 rounded-lg bg-white text-black font-extrabold hover:scale-105 transition">
+      Voir mes projets →
+    </button>
+
+    <button className="w-full sm:w-auto px-6 py-3 rounded-lg border border-gray-600 hover:bg-white/10 transition">
+      Me contacter
+    </button>
+
+  </div>
+</div>
     </div>
   );
 }
