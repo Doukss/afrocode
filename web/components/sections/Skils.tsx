@@ -24,8 +24,7 @@ export default function Skils() {
   ];
 
   return (
-    <section className="relative bg-[#000f1f] w-full py-20 px-6">
-
+    <section className="relative bg-[#000f1f] w-full px-6">
       {/* Glow */}
       <div className="absolute top-10 left-10 w-72 h-72 bg-blue-500 opacity-20 blur-3xl rounded-full"></div>
       <div className="absolute bottom-10 right-10 w-72 h-72 bg-purple-500 opacity-20 blur-3xl rounded-full"></div>
@@ -87,12 +86,8 @@ export default function Skils() {
 
             {/* Text */}
             <div className="z-10">
-              <h3 className="font-semibold text-white">
-                {tool.title}
-              </h3>
-              <p className="text-sm text-gray-400">
-                {tool.desc}
-              </p>
+              <h3 className="font-semibold text-white">{tool.title}</h3>
+              <p className="text-sm text-gray-400">{tool.desc}</p>
             </div>
           </motion.div>
         ))}
