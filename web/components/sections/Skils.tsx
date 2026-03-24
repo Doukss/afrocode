@@ -24,7 +24,7 @@ export default function Skils() {
   ];
 
   return (
-    <section className="relative bg-[#000f1f] w-full px-6">
+    <section className="relative bg-[#000f1f] py-20 w-full px-6">
       {/* Glow */}
       <div className="absolute top-10 left-10 w-72 h-72 bg-blue-500 opacity-20 blur-3xl rounded-full"></div>
       <div className="absolute bottom-10 right-10 w-72 h-72 bg-purple-500 opacity-20 blur-3xl rounded-full"></div>
@@ -36,10 +36,10 @@ export default function Skils() {
         transition={{ duration: 0.6 }}
         className="text-center mb-12"
       >
-        <h2 className="text-5xl text-white font-bold">
+        <h2 className="text-3xl md:text-5xl text-white font-bold">
           Outils et technologies
         </h2>
-        <p className="text-xl text-gray-400 mt-3">
+        <p className="text-base md:text-xl text-gray-400 mt-3">
           Mes compétences professionnelles
         </p>
       </motion.div>

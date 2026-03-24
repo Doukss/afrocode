@@ -73,12 +73,12 @@ export default function About() {
           >
             <div className="w-full max-w-sm md:max-w-md flex justify-center">
               <ProfileCard
-                name="Malick Mbodji"
-                title="Software Engineer"
+                name=""
+                title=""
                 handle="javicodes"
                 status="Online"
                 contactText="Contact Me"
-                avatarUrl="/profile.jpg"
+                avatarUrl="/liki.png"
                 miniAvatarUrl="/milk.jpg"
                 showUserInfo={false}
                 enableTilt={true}
