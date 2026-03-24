@@ -18,10 +18,10 @@ export default function Contact() {
 
     emailjs
       .sendForm(
-        "service_l5383e5",    // 🔁 remplace
+        "service_3rqbpkb",    // 🔁 remplace
         "template_b80hhyj",  // 🔁 remplace
         form.current,
-        "3UQFYFB13UErzifZQ"    // 🔁 remplace
+        "Fq0C83vhTf7s_2uB-"    // 🔁 remplace
       )
       .then(
         () => {

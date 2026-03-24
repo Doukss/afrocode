@@ -6,11 +6,8 @@ import ProfileCard from "../ui/ProfileCard";
 export default function About() {
   return (
     <section className="bg-[#000f1f] w-full min-h-screen flex items-center justify-center px-4 py-16">
-      
       <div className="w-full max-w-7xl rounded-2xl border-2 md:border-4 border-[#6818A5] shadow-[0_0_40px_#6818A5] p-6 md:p-10">
-        
         <div className="flex flex-col lg:flex-row items-center gap-10">
-          
           {/* TEXTE */}
           <motion.div
             initial={{ opacity: 0, x: -80 }}
@@ -31,7 +28,6 @@ export default function About() {
 
             {/* STATS */}
             <div className="grid grid-cols-3 gap-4 mt-8 text-center">
-              
               {[
                 { value: "20+", label: "projets terminés" },
                 { value: "3+", label: "années d'expérience" },
@@ -52,7 +48,6 @@ export default function About() {
                   </p>
                 </motion.div>
               ))}
-
             </div>
 
             <motion.p
@@ -93,7 +88,6 @@ export default function About() {
               />
             </div>
           </motion.div>
-
         </div>
       </div>
     </section>
