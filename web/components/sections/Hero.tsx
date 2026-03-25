@@ -2,7 +2,9 @@ import Silk from "../ui/Silk";
 
 export default function Hero() {
   return (
+    
     <div className="relative w-full h-screen">
+      
       <div className="absolute inset-0 flex items-center justify-center">
         <Silk
           speed={5}
