@@ -63,7 +63,6 @@ export default function About() {
               </motion.p>
             </motion.div>
           
-
           {/* CARD */}
           <motion.div
             initial={{ opacity: 0, x: 80, scale: 0.9 }}
