@@ -1,12 +1,12 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import ProfileCard from "../ui/ProfileCard";
 
 export default function About() {
   return (
     <section className="bg-[#000f1f] w-full min-h-screen flex items-center justify-center px-4 py-12">
+
       <div className="w-full max-w-7xl rounded-2xl border-4 border-[#6818A5] shadow-[0_0_40px_#6818A5] p-6 md:p-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-10">
           {/* TEXTE */}
@@ -21,7 +21,7 @@ export default function About() {
               </h1>
 
               <p className="mt-4 text-base md:text-lg text-white font-light leading-relaxed">
-                Je suis un développeur passionné par la création d'expériences
+                Je suis un développeur passionné par la création d&apos;expériences
                 web innovantes et performantes. Avec une expertise en
                 développement full stack et en architecture SaaS, je transforme
                 des idées complexes en solutions digitales fluides et efficaces.
@@ -33,7 +33,7 @@ export default function About() {
               <div className="grid grid-cols-3 gap-4 mt-8 text-center">
                 {[
                   { value: "20+", label: "projets terminés" },
-                  { value: "3+", label: "années d'expérience" },
+                  { value: "3+", label: "années d&apos;expérience" },
                   { value: "15+", label: "clients satisfaits" },
                 ].map((item, i) => (
                   <motion.div
@@ -59,7 +59,7 @@ export default function About() {
                 transition={{ delay: 0.6 }}
                 className="text-gray-400 text-sm md:text-xl mt-8 font-extralight"
               >
-                Travailler avec le cœur, créer avec l'esprit.
+                Travailler avec le cœur, créer avec l&apos;esprit.
               </motion.p>
             </motion.div>
           
@@ -96,3 +96,4 @@ export default function About() {
     </section>
   );
 }
+
