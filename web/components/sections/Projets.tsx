@@ -41,7 +41,10 @@ export default function Projets() {
       : projects.filter((p) => p.category === active);
 
   return (
-    <section className="relative w-full min-h-screen px-6 py-16 bg-gradient-to-br from-[#000814] via-[#001d3d] to-[#003566]">
+    <section
+      id="projects"
+      className="relative w-full min-h-screen px-6 py-16 bg-gradient-to-br from-[#000814] via-[#001d3d] to-[#003566]"
+    >
       {/* Background glow */}
       <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500 opacity-20 blur-3xl rounded-full"></div>
       <div className="absolute bottom-20 right-20 w-72 h-72 bg-purple-500 opacity-20 blur-3xl rounded-full"></div>
