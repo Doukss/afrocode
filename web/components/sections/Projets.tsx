@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 const projects = [
@@ -96,11 +97,13 @@ export default function Projets() {
               {/* Card */}
               <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-5 h-full border border-white/10 flex flex-col">
                 {/* IMAGE */}
-                <div className="mb-4 rounded-xl overflow-hidden">
-                  <img
+                <div className="relative mb-4 h-48 overflow-hidden rounded-xl">
+                  <Image
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
 

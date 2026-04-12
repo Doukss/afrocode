@@ -11,7 +11,8 @@ export default function Hero() {
     <section
       id="hero"
       aria-labelledby="hero-title"
-      className="relative isolate min-h-[100svh] overflow-hidden"
+      className="relative isolate min-h-screen overflow-hidden"
+      style={{ minHeight: "100dvh" }}
     >
       <div className="pointer-events-none absolute inset-0 -z-20">
         <Silk
@@ -25,14 +26,21 @@ export default function Hero() {
 
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-slate-950/50 via-slate-950/35 to-slate-950/80" />
 
-      <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-6xl flex-col items-center justify-center px-4 py-16 text-center text-white sm:px-6">
-        <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-blue-200/80 sm:text-sm">
+      <div
+        className="relative z-10 mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-center px-5 text-center text-white sm:px-6"
+        style={{
+          minHeight: "100dvh",
+          paddingTop: "max(3.5rem, env(safe-area-inset-top))",
+          paddingBottom: "max(2rem, env(safe-area-inset-bottom))",
+        }}
+      >
+        <p className="mb-4 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-blue-200/80 sm:text-sm sm:tracking-[0.35em]">
           Full Stack / SaaS / Experiences digitales
         </p>
 
         <h1
           id="hero-title"
-          className="text-4xl font-extrabold leading-tight sm:text-6xl md:text-8xl lg:text-9xl"
+          className="text-[clamp(2.2rem,13vw,4rem)] font-extrabold leading-[1.05] sm:text-6xl md:text-8xl lg:text-9xl"
         >
           Malick Mbodji
         </h1>
@@ -42,12 +50,12 @@ export default function Hero() {
           d&apos;experiences web utiles.
         </p>
 
-        <p className="mt-6 max-w-2xl text-sm leading-relaxed text-slate-200 sm:text-base md:text-lg">
+        <p className="mt-5 max-w-2xl text-sm leading-relaxed text-slate-200 sm:mt-6 sm:text-base md:text-lg">
           Je transforme des idees complexes en produits web fluides, fiables et
           performants, penses pour soutenir une vraie ambition metier.
         </p>
 
-        <div className="mt-8 flex w-full flex-col gap-4 sm:w-auto sm:flex-row">
+        <div className="mt-7 flex w-full max-w-sm flex-col gap-3 sm:mt-8 sm:max-w-none sm:w-auto sm:flex-row sm:gap-4">
           <a href="#projects" className={primaryCtaClassName}>
             Voir mes projets
           </a>

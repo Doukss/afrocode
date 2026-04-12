@@ -59,7 +59,7 @@ export default function Skils() {
         }}
         className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6"
       >
-        {tools.map((tool, index) => (
+        {tools.map((tool) => (
           <motion.div
             key={tool.title}
             variants={{

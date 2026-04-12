@@ -98,7 +98,7 @@ export default function Specialite() {
               </h3>
               <p className="text-gray-400 mt-4 text-sm md:text-base leading-relaxed">
                 Des systèmes conçus pour évoluer sans limite. De la startup à
-                l'entreprise, votre infrastructure grandit sans réécriture ni
+                l&apos;entreprise, votre infrastructure grandit sans réécriture ni
                 dette technique.
               </p>
             </div>
