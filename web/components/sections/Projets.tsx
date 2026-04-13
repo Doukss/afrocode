@@ -44,28 +44,28 @@ export default function Projets() {
   return (
     <section
       id="projects"
-      className="relative w-full min-h-screen px-6 py-16 bg-gradient-to-br from-[#000814] via-[#001d3d] to-[#003566]"
+      className="relative w-full min-h-screen overflow-x-clip bg-gradient-to-br from-[#000814] via-[#001d3d] to-[#003566] px-4 py-14 sm:px-6 sm:py-16"
     >
       {/* Background glow */}
       <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500 opacity-20 blur-3xl rounded-full"></div>
       <div className="absolute bottom-20 right-20 w-72 h-72 bg-purple-500 opacity-20 blur-3xl rounded-full"></div>
 
       {/* Header */}
-      <div className="text-center mb-12 relative z-10">
-        <h2 className="text-5xl font-bold text-white">Projets</h2>
-        <p className="text-gray-300 mt-3">
+      <div className="relative z-10 mx-auto mb-10 max-w-3xl text-center sm:mb-12">
+        <h2 className="text-3xl font-bold text-white sm:text-5xl">Projets</h2>
+        <p className="mt-3 text-gray-300">
           Une sélection de projets reflétant mes compétences et ma créativité.
         </p>
       </div>
 
       {/* Filtres */}
-      <div className="flex justify-center gap-4 flex-wrap mb-12 relative z-10">
+      <div className="relative z-10 mb-10 flex flex-wrap justify-center gap-2 sm:mb-12 sm:gap-4">
         {categories.map((cat) => (
           <motion.button
             key={cat}
             onClick={() => setActive(cat)}
             whileTap={{ scale: 0.9 }}
-            className={`px-5 py-2 rounded-full backdrop-blur-lg border transition-all duration-300
+            className={`rounded-full border px-4 py-2 text-sm backdrop-blur-lg transition-all duration-300 sm:px-5
               ${
                 active === cat
                   ? "bg-white/10 border-white text-white shadow-lg"
@@ -80,7 +80,7 @@ export default function Projets() {
       {/* Grid */}
       <motion.div
         layout
-        className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10"
+        className="relative z-10 mx-auto grid max-w-6xl gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3"
       >
         <AnimatePresence>
           {filtered.map((project) => (
@@ -92,10 +92,10 @@ export default function Projets() {
               exit={{ opacity: 0, scale: 0.8 }}
               transition={{ duration: 0.4 }}
               whileHover={{ scale: 1.05 }}
-              className="relative group rounded-2xl p-[1px] bg-gradient-to-r from-blue-900 via-purple-700 to-pink-400"
+              className="relative group rounded-2xl bg-gradient-to-r from-blue-900 via-purple-700 to-pink-400 p-[1px]"
             >
               {/* Card */}
-              <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-5 h-full border border-white/10 flex flex-col">
+              <div className="flex h-full flex-col rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-xl sm:p-5">
                 {/* IMAGE */}
                 <div className="relative mb-4 h-48 overflow-hidden rounded-xl">
                   <Image
@@ -108,7 +108,7 @@ export default function Projets() {
                 </div>
 
                 {/* TITLE */}
-                <h3 className="text-xl font-semibold text-white mb-2">
+                <h3 className="mb-2 break-words text-xl font-semibold text-white">
                   {project.title}
                 </h3>
 
@@ -130,11 +130,11 @@ export default function Projets() {
                 </div>
 
                 {/* BUTTONS */}
-                <div className="flex gap-3 mt-auto">
-                  <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-lg text-sm hover:opacity-90">
+                <div className="mt-auto flex flex-col gap-2 sm:flex-row sm:gap-3">
+                  <button className="rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 px-4 py-2 text-sm text-white hover:opacity-90">
                     Voir projet
                   </button>
-                  <button className="border border-white/20 text-gray-300 px-4 py-2 rounded-lg text-sm hover:bg-white/10">
+                  <button className="rounded-lg border border-white/20 px-4 py-2 text-sm text-gray-300 hover:bg-white/10">
                     Code
                   </button>
                 </div>

@@ -11,7 +11,7 @@ export default function Hero() {
     <section
       id="hero"
       aria-labelledby="hero-title"
-      className="relative isolate min-h-screen overflow-hidden"
+      className="relative isolate min-h-screen overflow-x-clip overflow-y-hidden"
       style={{ minHeight: "100dvh" }}
     >
       <div className="pointer-events-none absolute inset-0 -z-20">
@@ -32,25 +32,27 @@ export default function Hero() {
           minHeight: "100dvh",
           paddingTop: "max(3.5rem, env(safe-area-inset-top))",
           paddingBottom: "max(2rem, env(safe-area-inset-bottom))",
+          paddingLeft: "max(1.25rem, env(safe-area-inset-left))",
+          paddingRight: "max(1.25rem, env(safe-area-inset-right))",
         }}
       >
-        <p className="mb-4 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-blue-200/80 sm:text-sm sm:tracking-[0.35em]">
+        <p className="mb-4 w-full max-w-[22rem] text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-blue-200/80 sm:max-w-none sm:text-sm sm:tracking-[0.35em]">
           Full Stack / SaaS / Experiences digitales
         </p>
 
         <h1
           id="hero-title"
-          className="text-[clamp(2.2rem,13vw,4rem)] font-extrabold leading-[1.05] sm:text-6xl md:text-8xl lg:text-9xl"
+          className="w-full max-w-[14ch] text-balance break-words text-[clamp(2.1rem,12vw,4rem)] font-extrabold leading-[1.05] sm:max-w-none sm:text-6xl md:text-8xl lg:text-9xl"
         >
           Malick Mbodji
         </h1>
 
-        <p className="mt-4 max-w-3xl text-base font-semibold text-slate-100 sm:text-lg md:text-2xl">
+        <p className="mt-4 max-w-3xl text-pretty text-base font-semibold text-slate-100 sm:text-lg md:text-2xl">
           Developpeur Full Stack, architecte SaaS et createur
           d&apos;experiences web utiles.
         </p>
 
-        <p className="mt-5 max-w-2xl text-sm leading-relaxed text-slate-200 sm:mt-6 sm:text-base md:text-lg">
+        <p className="mt-5 max-w-2xl text-pretty text-sm leading-relaxed text-slate-200 sm:mt-6 sm:text-base md:text-lg">
           Je transforme des idees complexes en produits web fluides, fiables et
           performants, penses pour soutenir une vraie ambition metier.
         </p>
