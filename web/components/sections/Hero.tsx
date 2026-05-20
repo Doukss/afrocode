@@ -49,7 +49,7 @@ export default function Hero() {
 
         <p className="mt-4 max-w-3xl text-pretty text-base font-semibold text-slate-100 sm:text-lg md:text-2xl">
           Developpeur Full Stack, architecte SaaS et createur
-          d&apos;experiences web utiles.
+          d&apos;experiences web & mobile utiles.
         </p>
 
         <p className="mt-5 max-w-2xl text-pretty text-sm leading-relaxed text-slate-200 sm:mt-6 sm:text-base md:text-lg">
