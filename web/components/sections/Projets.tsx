@@ -89,59 +89,56 @@ export default function Projets() {
               layout
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.8 }}
+              exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.4 }}
-              whileHover={{ scale: 1.05 }}
-              className="relative group rounded-2xl bg-gradient-to-r from-blue-900 via-purple-700 to-pink-400 p-[1px]"
+              whileHover={{ y: -6 }}
+              className="relative group flex h-full flex-col rounded-2xl border border-white/10 bg-slate-900/30 p-4 backdrop-blur-md transition-all duration-300 hover:border-white/20 hover:bg-slate-900/50 sm:p-5"
             >
-              {/* Card */}
-              <div className="flex h-full flex-col rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-xl sm:p-5">
-                {/* IMAGE */}
-                <div className="relative mb-4 h-48 overflow-hidden rounded-xl">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                </div>
-
-                {/* TITLE */}
-                <h3 className="mb-2 break-words text-xl font-semibold text-white">
-                  {project.title}
-                </h3>
-
-                {/* DESCRIPTION */}
-                <p className="text-gray-300 text-sm mb-4">
-                  {project.description}
-                </p>
-
-                {/* TECH TAGS */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tech.map((t, i) => (
-                    <span
-                      key={i}
-                      className="text-xs bg-white/10 text-blue-300 px-3 py-1 rounded-full"
-                    >
-                      {t}
-                    </span>
-                  ))}
-                </div>
-
-                {/* BUTTONS */}
-                <div className="mt-auto flex flex-col gap-2 sm:flex-row sm:gap-3">
-                  <button className="rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 px-4 py-2 text-sm text-white hover:opacity-90">
-                    Voir projet
-                  </button>
-                  <button className="rounded-lg border border-white/20 px-4 py-2 text-sm text-gray-300 hover:bg-white/10">
-                    Code
-                  </button>
-                </div>
+              {/* IMAGE */}
+              <div className="relative mb-4 h-48 overflow-hidden rounded-xl bg-slate-950/40">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
               </div>
 
-              {/* Glow hover */}
-              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 blur-xl"></div>
+              {/* TITLE */}
+              <h3 className="mb-2 break-words text-xl font-semibold text-white group-hover:text-blue-400 transition-colors">
+                {project.title}
+              </h3>
+
+              {/* DESCRIPTION */}
+              <p className="text-gray-400 text-sm mb-4 leading-relaxed">
+                {project.description}
+              </p>
+
+              {/* TECH TAGS */}
+              <div className="flex flex-wrap gap-2 mb-4">
+                {project.tech.map((t, i) => (
+                  <span
+                    key={i}
+                    className="text-xs bg-white/5 border border-white/10 text-blue-300 px-3 py-1 rounded-full"
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
+
+              {/* BUTTONS */}
+              <div className="mt-auto flex flex-col gap-2 sm:flex-row sm:gap-3">
+                <button className="rounded-lg bg-white px-4 py-2 text-sm font-medium text-slate-950 transition duration-200 hover:bg-slate-100 hover:scale-[1.02] active:scale-[0.98]">
+                  Voir projet
+                </button>
+                <button className="rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-gray-300 transition duration-200 hover:bg-white/10 hover:text-white">
+                  Code
+                </button>
+              </div>
+
+              {/* Subtle background glow hover */}
+              <div className="absolute inset-0 -z-10 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-blue-500/5 to-purple-500/5 blur-xl"></div>
             </motion.div>
           ))}
         </AnimatePresence>

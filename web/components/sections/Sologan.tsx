@@ -2,7 +2,7 @@ import MagicRings from "../ui/MagicRings";
 
 export default function Sologan() {
   return (
-    <section className="bg-[#000f1f] w-full h-screen relative">
+    <section className="bg-[#000f1f] w-full h-screen relative overflow-hidden">
 
       {/* 🎨 Background */}
       <div className="absolute inset-0">

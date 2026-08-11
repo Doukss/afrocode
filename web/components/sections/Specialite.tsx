@@ -1,15 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Zap, Cpu, Layout } from "lucide-react";
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 80 },
+  hidden: { opacity: 0, y: 50 },
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
     transition: {
-      delay: i * 0.2,
-      duration: 0.6,
+      delay: i * 0.15,
+      duration: 0.5,
     },
   }),
 };
@@ -19,18 +20,18 @@ export default function Specialite() {
     <section className="w-full min-h-screen overflow-x-clip bg-gradient-to-br from-[#000f1f] via-[#021a35] to-[#000f1f] px-4 py-14 sm:py-16">
       {/* TITRES */}
       <motion.div
-        initial={{ opacity: 0, y: -30 }}
+        initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.5 }}
         className="flex flex-col items-center text-center"
       >
-        <h1 className="text-sm font-extrabold text-gray-500 md:text-lg">
+        <span className="text-xs font-bold uppercase tracking-[0.2em] text-blue-400">
           Ce que je préfère résoudre
-        </h1>
+        </span>
 
-        <h1 className="mt-3 text-3xl font-extrabold text-white sm:text-4xl md:text-5xl">
+        <h2 className="mt-3 text-3xl font-extrabold text-white sm:text-4xl md:text-5xl">
           Ma spécialité
-        </h1>
+        </h2>
       </motion.div>
 
       {/* CARDS */}
@@ -41,33 +42,32 @@ export default function Specialite() {
           initial="hidden"
           whileInView="visible"
           variants={cardVariants}
-          whileHover={{ scale: 1.05 }}
-          className="group relative h-full min-h-[320px] w-full rounded-2xl bg-gradient-to-br from-violet-500/50 via-purple-500/30 to-pink-500/50 p-[1px]"
+          whileHover={{ y: -8 }}
+          className="group relative flex h-full min-h-[320px] w-full flex-col justify-between rounded-2xl border border-white/5 bg-slate-950/40 p-5 backdrop-blur-md transition-all duration-300 hover:border-white/15 hover:bg-slate-950/60 sm:p-6"
         >
-          <div className="absolute inset-0 rounded-2xl blur-xl opacity-40 group-hover:opacity-70 transition bg-gradient-to-br from-violet-500 via-purple-500 to-pink-500"></div>
-
-          <div className="relative z-10 flex h-full w-full flex-col justify-between rounded-2xl border border-white/10 bg-black/70 p-5 backdrop-blur-xl sm:p-6">
-            <div className="flex justify-between items-start">
-              <div className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-violet-500 to-pink-500 text-white text-xl shadow-lg">
-                ⚡
-              </div>
-              <span className="text-gray-500 text-sm">01</span>
+          <div className="flex justify-between items-start">
+            <div className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-xl bg-violet-500/10 border border-violet-500/30 text-violet-400 transition-colors group-hover:bg-violet-500/20">
+              <Zap className="w-6 h-6 md:w-7 md:h-7" />
             </div>
-
-            <div>
-              <span className="text-sm uppercase tracking-[0.18em] text-violet-400 sm:text-base md:text-lg md:tracking-widest">
-                Core Web Vitals
-              </span>
-              <h3 className="text-white text-xl md:text-2xl font-semibold mt-2">
-                Performance
-              </h3>
-              <p className="mt-4 text-pretty text-sm leading-relaxed text-gray-400 md:text-base">
-                Chargement sub-seconde et fluidité absolue — sur mobile comme
-                sur desktop. Je traque chaque milliseconde pour une expérience
-                sans friction.
-              </p>
-            </div>
+            <span className="text-gray-600 text-sm font-semibold">01</span>
           </div>
+
+          <div className="mt-8">
+            <span className="text-xs font-semibold uppercase tracking-widest text-violet-400">
+              Core Web Vitals
+            </span>
+            <h3 className="text-white text-xl md:text-2xl font-bold mt-2">
+              Performance
+            </h3>
+            <p className="mt-4 text-sm leading-relaxed text-gray-400">
+              Chargement sub-seconde et fluidité absolue — sur mobile comme
+              sur desktop. Je traque chaque milliseconde pour une expérience
+              sans friction.
+            </p>
+          </div>
+
+          {/* Subtle accent light */}
+          <div className="absolute top-0 right-0 -z-10 w-24 h-24 bg-violet-500/5 blur-2xl rounded-full transition-opacity group-hover:bg-violet-500/10"></div>
         </motion.div>
 
         {/* CARD 2 */}
@@ -76,33 +76,32 @@ export default function Specialite() {
           initial="hidden"
           whileInView="visible"
           variants={cardVariants}
-          whileHover={{ scale: 1.05 }}
-          className="group relative h-full min-h-[320px] w-full rounded-2xl bg-gradient-to-br from-[#90DBF4]/50 via-[#8EECF5]/30 to-[#98F5E1]/50 p-[1px]"
+          whileHover={{ y: -8 }}
+          className="group relative flex h-full min-h-[320px] w-full flex-col justify-between rounded-2xl border border-white/5 bg-slate-950/40 p-5 backdrop-blur-md transition-all duration-300 hover:border-white/15 hover:bg-slate-950/60 sm:p-6"
         >
-          <div className="absolute inset-0 rounded-2xl blur-xl opacity-40 group-hover:opacity-70 transition bg-gradient-to-br from-[#90DBF4] via-[#8EECF5] to-[#98F5E1]"></div>
-
-          <div className="relative z-10 flex h-full w-full flex-col justify-between rounded-2xl border border-white/10 bg-black/70 p-5 backdrop-blur-xl sm:p-6">
-            <div className="flex justify-between items-start">
-              <div className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-[#90DBF4] to-[#146a72] text-white text-xl shadow-lg">
-                ⚡
-              </div>
-              <span className="text-gray-500 text-sm">02</span>
+          <div className="flex justify-between items-start">
+            <div className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 transition-colors group-hover:bg-cyan-500/20">
+              <Cpu className="w-6 h-6 md:w-7 md:h-7" />
             </div>
-
-            <div>
-              <span className="text-sm uppercase tracking-[0.18em] text-[#98F5E1] sm:text-base md:text-lg md:tracking-widest">
-                Architecture scalable
-              </span>
-              <h3 className="text-white text-xl md:text-2xl font-semibold mt-2">
-                Microservices
-              </h3>
-              <p className="mt-4 text-pretty text-sm leading-relaxed text-gray-400 md:text-base">
-                Des systèmes conçus pour évoluer sans limite. De la startup à
-                l&apos;entreprise, votre infrastructure grandit sans réécriture ni
-                dette technique.
-              </p>
-            </div>
+            <span className="text-gray-600 text-sm font-semibold">02</span>
           </div>
+
+          <div className="mt-8">
+            <span className="text-xs font-semibold uppercase tracking-widest text-cyan-400">
+              Architecture scalable
+            </span>
+            <h3 className="text-white text-xl md:text-2xl font-bold mt-2">
+              Microservices
+            </h3>
+            <p className="mt-4 text-sm leading-relaxed text-gray-400">
+              Des systèmes conçus pour évoluer sans limite. De la startup à
+              l'entreprise, votre infrastructure grandit sans réécriture ni
+              dette technique.
+            </p>
+          </div>
+
+          {/* Subtle accent light */}
+          <div className="absolute top-0 right-0 -z-10 w-24 h-24 bg-cyan-500/5 blur-2xl rounded-full transition-opacity group-hover:bg-cyan-500/10"></div>
         </motion.div>
 
         {/* CARD 3 */}
@@ -111,32 +110,31 @@ export default function Specialite() {
           initial="hidden"
           whileInView="visible"
           variants={cardVariants}
-          whileHover={{ scale: 1.05 }}
-          className="group relative h-full min-h-[320px] w-full rounded-2xl bg-gradient-to-br from-[#ee9b00]/50 via-[#CA6702]/30 to-[#BB3E03]/50 p-[1px]"
+          whileHover={{ y: -8 }}
+          className="group relative flex h-full min-h-[320px] w-full flex-col justify-between rounded-2xl border border-white/5 bg-slate-950/40 p-5 backdrop-blur-md transition-all duration-300 hover:border-white/15 hover:bg-slate-950/60 sm:p-6"
         >
-          <div className="absolute inset-0 rounded-2xl blur-xl opacity-40 group-hover:opacity-70 transition bg-gradient-to-br from-[#ee9b00] via-[#CA6702] to-[#BB3E03]"></div>
-
-          <div className="relative z-10 flex h-full w-full flex-col justify-between rounded-2xl border border-white/10 bg-black/70 p-5 backdrop-blur-xl sm:p-6">
-            <div className="flex justify-between items-start">
-              <div className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-[#f7b945] to-[#5f471a] text-white text-xl shadow-lg">
-                ⚡
-              </div>
-              <span className="text-gray-500 text-sm">03</span>
+          <div className="flex justify-between items-start">
+            <div className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 transition-colors group-hover:bg-amber-500/20">
+              <Layout className="w-6 h-6 md:w-7 md:h-7" />
             </div>
-
-            <div>
-              <span className="text-sm uppercase tracking-[0.18em] text-[#f7b945] sm:text-base md:text-lg md:tracking-widest">
-                Design UI/UX
-              </span>
-              <h3 className="text-white text-xl md:text-2xl font-semibold mt-2">
-                Expérience utilisateur
-              </h3>
-              <p className="mt-4 text-pretty text-sm leading-relaxed text-gray-400 md:text-base">
-                Des interfaces intuitives qui attirent et fidélisent. 
-                Je conçois des expériences cohérentes où chaque clic a du sens.
-              </p>
-            </div>
+            <span className="text-gray-600 text-sm font-semibold">03</span>
           </div>
+
+          <div className="mt-8">
+            <span className="text-xs font-semibold uppercase tracking-widest text-amber-400">
+              Design UI/UX
+            </span>
+            <h3 className="text-white text-xl md:text-2xl font-bold mt-2">
+              Expérience utilisateur
+            </h3>
+            <p className="mt-4 text-sm leading-relaxed text-gray-400">
+              Des interfaces intuitives qui attirent et fidélisent.
+              Je conçois des expériences cohérentes où chaque clic a du sens.
+            </p>
+          </div>
+
+          {/* Subtle accent light */}
+          <div className="absolute top-0 right-0 -z-10 w-24 h-24 bg-amber-500/5 blur-2xl rounded-full transition-opacity group-hover:bg-amber-500/10"></div>
         </motion.div>
       </div>
     </section>

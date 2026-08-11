@@ -14,7 +14,7 @@ export default function CTA() {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="max-w-4xl mx-auto text-center relative z-10 bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-10 shadow-lg"
+        className="max-w-4xl mx-auto text-center relative z-10 bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 sm:p-10 shadow-lg"
       >
         {/* Titre */}
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">

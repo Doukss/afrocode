@@ -5,9 +5,11 @@ import ProfileCard from "../ui/ProfileCard";
 
 export default function About() {
   return (
-    <section className="bg-[#000f1f] w-full min-h-screen flex items-center justify-center px-4 py-12">
+    <section className="bg-[#000f1f] w-full min-h-screen flex items-center justify-center px-4 py-12 overflow-x-clip">
 
-      <div className="w-full max-w-7xl rounded-2xl border-4 border-[#6818A5] shadow-[0_0_40px_#6818A5] p-6 md:p-10">
+      <div className="w-full max-w-7xl rounded-3xl border border-white/10 bg-slate-950/30 backdrop-blur-md p-6 md:p-10 shadow-2xl relative overflow-hidden">
+        {/* Subtle background gradient glow */}
+        <div className="absolute -top-40 -left-40 w-96 h-96 bg-[#6818A5]/10 rounded-full blur-3xl -z-10"></div>
         <div className="flex flex-col md:flex-row items-center justify-between gap-10">
           {/* TEXTE */}
             <motion.div

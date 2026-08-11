@@ -39,10 +39,10 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative w-full py-20 px-6 bg-[#000f1f]"
+      className="relative w-full py-20 px-6 bg-[#000f1f] overflow-x-clip"
     >
       {/* Glow */}
-      <div className="absolute bottom-10 right-10 w-72 h-72 bg-purple-500 opacity-20 blur-3xl rounded-full"></div>
+      <div className="absolute bottom-10 right-10 w-72 h-72 bg-purple-500/10 opacity-20 blur-3xl rounded-full"></div>
 
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 relative z-10">
 
