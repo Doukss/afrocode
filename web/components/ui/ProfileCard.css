@@ -69,6 +69,7 @@
     calc((var(--pointer-from-top) * 20px) - 6px) 20px -5px;
   transition: transform 1s ease;
   transform: translateZ(0) rotateX(0deg) rotateY(0deg);
+  transform-style: preserve-3d;
   background: rgba(0, 0, 0, 0.9);
   backface-visibility: hidden;
   overflow: hidden;
@@ -87,6 +88,7 @@
 .pc-card-shell {
   position: relative;
   z-index: 1;
+  transform-style: preserve-3d;
 }
 
 .pc-card * {
@@ -102,6 +104,7 @@
   background-image: var(--inner-gradient);
   background-color: rgba(0, 0, 0, 0.9);
   transform: none;
+  transform-style: preserve-3d;
 }
 
 .pc-shine {
@@ -242,14 +245,18 @@
 }
 
 .pc-avatar-content {
-  mix-blend-mode: luminosity;
+  mix-blend-mode: normal;
   overflow: visible;
-  transform: translateZ(2);
+  z-index: 5;
+  transform: translate3d(0, 0, 10px);
   backface-visibility: hidden;
 }
 
 .pc-avatar-content .avatar {
+  display: block !important;
+  grid-area: auto !important;
   width: 100%;
+  height: auto;
   position: absolute;
   left: 50%;
   transform-origin: 50% 100%;
@@ -305,6 +312,8 @@
 }
 
 .pc-mini-avatar img {
+  display: block !important;
+  grid-area: auto !important;
   width: 100%;
   height: 100%;
   object-fit: cover;

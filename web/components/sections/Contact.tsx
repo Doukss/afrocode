@@ -118,7 +118,7 @@ export default function Contact() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium hover:opacity-90 disabled:opacity-50"
+            className="w-full py-3 rounded-lg bg-white text-gray-600 font-medium hover:opacity-90 disabled:opacity-50"
           >
             {loading ? "Envoi..." : "Envoyer"}
           </button>

@@ -35,7 +35,7 @@ export default function CTA() {
             href="#contact"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium shadow-lg"
+            className="px-6 py-3 rounded-xl bg-white text-gray-600 font-medium shadow-lg"
           >
             Me contacter
           </motion.a>
