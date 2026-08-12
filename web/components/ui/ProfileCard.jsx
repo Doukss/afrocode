@@ -338,10 +338,6 @@ const ProfileCardComponent = ({
                 src={avatarUrl}
                 alt={`${name || "User"} avatar`}
                 loading="lazy"
-                onError={(e) => {
-                  const t = e.target;
-                  t.style.display = "none";
-                }}
               />
               {showUserInfo && (
                 <div className="pc-user-info">

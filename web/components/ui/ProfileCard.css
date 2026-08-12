@@ -245,6 +245,8 @@
 }
 
 .pc-avatar-content {
+  position: absolute;
+  inset: 0;
   mix-blend-mode: normal;
   overflow: visible;
   z-index: 5;
@@ -369,7 +371,7 @@
     0.1px
   );
   z-index: 5;
-  mix-blend-mode: luminosity;
+  mix-blend-mode: normal;
 }
 
 .pc-details {

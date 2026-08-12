@@ -2,39 +2,23 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-
-const projects = [
-  {
-    id: 1,
-    title: "Gestion de stock",
-    description: "Application web complète avec gestion des produits",
-    category: "Fullstack",
-    tech: ["Tailwind", "Cloudinary", "TypeScript", "Next", "Prisma"],
-    image: "/sk.jpg",
-  },
-  {
-    id: 2,
-    title: "API Produits",
-    description: "API REST performante avec Node.js et Prisma",
-    category: "Backend",
-    tech: ["Node.js", "Prisma"],
-    image: "/api.jpg",
-  },
-  {
-    id: 3,
-    title: "Dashboard UI",
-    description: "Interface moderne et responsive",
-    category: "Frontend",
-    tech: ["React", "Tailwind"],
-    image: "/dash.jpg",
-  },
-];
+import { projects } from "@/lib/projects";
 
 const categories = ["Tous", "Fullstack", "Frontend", "Backend"];
 
 export default function Projets() {
   const [active, setActive] = useState("Tous");
+  const router = useRouter();
+
+  const handleCardClick = (e: React.MouseEvent, id: number) => {
+    if ((e.target as HTMLElement).closest(".github-btn")) {
+      return;
+    }
+    router.push(`/projets/${id}`);
+  };
 
   const filtered =
     active === "Tous"
@@ -92,7 +76,8 @@ export default function Projets() {
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.4 }}
               whileHover={{ y: -6 }}
-              className="relative group flex h-full flex-col rounded-2xl border border-white/10 bg-slate-900/30 p-4 backdrop-blur-md transition-all duration-300 hover:border-white/20 hover:bg-slate-900/50 sm:p-5"
+              onClick={(e) => handleCardClick(e, project.id)}
+              className="relative group flex h-full flex-col rounded-2xl border border-white/10 bg-slate-900/30 p-4 backdrop-blur-md transition-all duration-300 hover:border-white/20 hover:bg-slate-900/50 cursor-pointer sm:p-5"
             >
               {/* IMAGE */}
               <div className="relative mb-4 h-48 overflow-hidden rounded-xl bg-slate-950/40">
@@ -129,12 +114,20 @@ export default function Projets() {
 
               {/* BUTTONS */}
               <div className="mt-auto flex flex-col gap-2 sm:flex-row sm:gap-3">
-                <button className="rounded-lg bg-white px-4 py-2 text-sm font-medium text-slate-950 transition duration-200 hover:bg-slate-100 hover:scale-[1.02] active:scale-[0.98]">
+                <Link
+                  href={`/projets/${project.id}`}
+                  className="rounded-lg bg-white px-4 py-2 text-sm font-medium text-slate-950 transition duration-200 hover:bg-slate-100 hover:scale-[1.02] active:scale-[0.98] text-center flex items-center justify-center flex-1"
+                >
                   Voir projet
-                </button>
-                <button className="rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-gray-300 transition duration-200 hover:bg-white/10 hover:text-white">
+                </Link>
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="github-btn rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-gray-300 transition duration-200 hover:bg-white/10 hover:text-white text-center flex items-center justify-center flex-1"
+                >
                   Code
-                </button>
+                </a>
               </div>
 
               {/* Subtle background glow hover */}
