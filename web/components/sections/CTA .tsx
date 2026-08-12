@@ -42,7 +42,8 @@ export default function CTA() {
 
           {/* Bouton secondaire */}
           <motion.a
-            href="/cv.pdf" // ajoute ton CV dans public/
+            href="/cv.pdf"
+            download="CV_Malick_Mbodji.pdf"
             target="_blank"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
