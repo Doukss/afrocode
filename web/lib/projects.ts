@@ -14,10 +14,10 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    title: "Gestion de stock",
-    description: "Application web complète avec gestion des produits",
+    title: "Gestion bancaire",
+    description: "Application de Gestion Financière",
     category: "Fullstack",
-    tech: ["Tailwind", "Cloudinary", "TypeScript", "Next", "Prisma"],
+    tech: ["Angular", "Spring Boot", "PostgreSQL"],
     image: "/sk.jpg",
     problemSolved: "Les commerçants et PME perdent souvent un temps précieux à suivre manuellement leur inventaire via des feuilles de calcul obsolètes et sujettes aux erreurs. Cette application résout ce problème en centralisant la gestion des produits, en fournissant des alertes automatiques de stock bas en temps réel et en assurant un stockage multimédia cloud performant pour les visuels produits.",
     detailedDescription: "Une plateforme SaaS complète de gestion d'inventaire permettant aux professionnels de suivre leurs stocks en temps réel. Elle propose une interface d'administration épurée pour l'ajout, la modification et la suppression de produits, ainsi que des graphiques analytiques interactifs montrant les tendances d'entrées et de sorties. Les images sont compressées et gérées via l'intégration directe de Cloudinary API.",
