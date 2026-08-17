@@ -19,9 +19,9 @@ export const projects: Project[] = [
     category: "Fullstack",
     tech: ["Angular", "Spring Boot", "PostgreSQL"],
     image: "/sk.jpg",
-    problemSolved: "Les commerçants et PME perdent souvent un temps précieux à suivre manuellement leur inventaire via des feuilles de calcul obsolètes et sujettes aux erreurs. Cette application résout ce problème en centralisant la gestion des produits, en fournissant des alertes automatiques de stock bas en temps réel et en assurant un stockage multimédia cloud performant pour les visuels produits.",
-    detailedDescription: "Une plateforme SaaS complète de gestion d'inventaire permettant aux professionnels de suivre leurs stocks en temps réel. Elle propose une interface d'administration épurée pour l'ajout, la modification et la suppression de produits, ainsi que des graphiques analytiques interactifs montrant les tendances d'entrées et de sorties. Les images sont compressées et gérées via l'intégration directe de Cloudinary API.",
-    projectUrl: "https://stocky-inventaire.vercel.app", // Remplacer par le lien réel s'il existe
+    problemSolved: "La startup Dakar-Tech Wallet souhaite développer une plateforme pour gérer les flux financiers (transactions) de ses utilisateurs. Le système doit permettre aux clients de gérer leur portefeuille, d'effectuer des virements, de solliciter des prêts et de les rembourser de manière flexible. Pour l'administration, le système doit automatiser l'évaluation du risque de crédit des clients grâce à un score de solvabilité basé sur leur comportement de paiement.",
+    detailedDescription: "Le système permettre aux clients de gérer leur portefeuille, d'effectuer des virements, de solliciter des prêts et de les rembourser de manière flexible. Pour l'administration, le système doit automatiser l'évaluation du risque de crédit des clients grâce à un score de solvabilité basé sur leur comportement de paiement.",
+    projectUrl: "https://dakar-tech-front.vercel.app", // Remplacer par le lien réel s'il existe
     githubUrl: "https://github.com/javicodes/gestion-de-stock", // Remplacer par le lien github réel s'il existe
   },
   {
