@@ -18,7 +18,7 @@ export const projects: Project[] = [
     description: "Application de Gestion Financière",
     category: "Fullstack",
     tech: ["Angular", "Spring Boot", "PostgreSQL"],
-    image: "/sk.jpg",
+    image: "/DT.png",
     problemSolved: "La startup Dakar-Tech Wallet souhaite développer une plateforme pour gérer les flux financiers (transactions) de ses utilisateurs. Le système doit permettre aux clients de gérer leur portefeuille, d'effectuer des virements, de solliciter des prêts et de les rembourser de manière flexible. Pour l'administration, le système doit automatiser l'évaluation du risque de crédit des clients grâce à un score de solvabilité basé sur leur comportement de paiement.",
     detailedDescription: "Le système permettre aux clients de gérer leur portefeuille, d'effectuer des virements, de solliciter des prêts et de les rembourser de manière flexible. Pour l'administration, le système doit automatiser l'évaluation du risque de crédit des clients grâce à un score de solvabilité basé sur leur comportement de paiement.",
     projectUrl: "https://dakar-tech-front.vercel.app", // Remplacer par le lien réel s'il existe
