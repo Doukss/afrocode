@@ -27,14 +27,14 @@ export const projects: Project[] = [
   {
     id: 2,
     title: "API Produits",
-    description: "API REST performante avec Node.js et Prisma",
+    description: "API REST Node.js · Express · Prisma ORM · Architecture en couches",
     category: "Backend",
-    tech: ["Node.js", "Prisma", "Express", "TypeScript"],
+    tech: ["Node.js", "Prisma", "Express", "cloudinary", "TypeScript"],
     image: "/api.jpg",
-    problemSolved: "Les applications web modernes nécessitent un point d'accès rapide, sécurisé et normalisé pour récupérer et manipuler les données produits sans latence. Cette API résout le besoin d'une infrastructure backend robuste capable de supporter des charges de trafic élevées tout en gérant l'authentification et les validations strictes.",
+    problemSolved: "EVENT 221 est un centre d'événements qui gère des espaces de réception, des prestataires de service, des clients et leurs réservations. Cette API REST fournit l'intégralité du back-end nécessaire au fonctionnement du système d'information du centre.",
     detailedDescription: "Une API REST hautement performante construite avec Node.js, Express et TypeScript. Elle intègre Prisma ORM pour une communication optimisée avec la base de données. L'API prend en charge l'authentification sécurisée par JWT, la validation stricte des schémas d'entrée, des filtres complexes (prix, catégorie, stock) et un système de pagination fluide.",
     projectUrl: "https://api-produits.onrender.com",
-    githubUrl: "https://github.com/javicodes/api-produits",
+    githubUrl: "https://github.com/Doukss/even_221",
   },
   {
     id: 3,
