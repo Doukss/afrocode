@@ -54,18 +54,12 @@ export default function Footer() {
 
           <div className="flex gap-4">
             <a
-              href="#"
+              href="https://www.linkedin.com/in/malick-mbodji/?skipRedirect=true"
               className="px-4 py-2 border border-white/20 rounded-lg text-gray-300 hover:bg-white/10"
             >
               LinkedIn
             </a>
 
-            <a
-              href="#"
-              className="px-4 py-2 border border-white/20 rounded-lg text-gray-300 hover:bg-white/10"
-            >
-              GitHub
-            </a>
           </div>
         </motion.div>
       </div>
