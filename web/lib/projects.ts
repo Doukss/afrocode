@@ -38,7 +38,7 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    title: "Vitalink",
+    title: "Vita-link",
     description: "Plateforme d'urgence medicale",
     category: "UI/UX",
     tech: ["Figma"],
