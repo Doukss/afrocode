@@ -97,24 +97,28 @@ export default async function ProjectPage({ params }: PageProps) {
 
           {/* Boutons d'action */}
           <footer className="flex flex-col sm:flex-row gap-4 border-t border-white/10 pt-8 mt-8">
-            <a
-              href={project.projectUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-6 py-3 text-base font-bold text-slate-950 transition duration-200 hover:scale-[1.02] hover:bg-slate-100 flex-1"
-            >
-              <ExternalLink className="w-5 h-5" />
-              Voir le projet
-            </a>
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-6 py-3 text-base font-semibold text-white transition duration-200 hover:bg-white/10 flex-1"
-            >
-              <Github className="w-5 h-5" />
-              Code Source
-            </a>
+            {(project.category === "Fullstack" || project.category === "UI/UX") && (
+              <a
+                href={project.projectUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-6 py-3 text-base font-bold text-slate-950 transition duration-200 hover:scale-[1.02] hover:bg-slate-100 flex-1"
+              >
+                <ExternalLink className="w-5 h-5" />
+                Voir le projet
+              </a>
+            )}
+            {project.category === "Backend" && (
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-6 py-3 text-base font-semibold text-white transition duration-200 hover:bg-white/10 flex-1"
+              >
+                <Github className="w-5 h-5" />
+                Code Source
+              </a>
+            )}
           </footer>
         </article>
       </div>

@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { projects } from "@/lib/projects";
 
-const categories = ["Tous", "Fullstack", "Frontend", "Backend"];
+const categories = ["Tous", "Fullstack", "UI/UX", "Backend"];
 
 export default function Projets() {
   const [active, setActive] = useState("Tous");
@@ -114,20 +114,24 @@ export default function Projets() {
 
               {/* BUTTONS */}
               <div className="mt-auto flex flex-col gap-2 sm:flex-row sm:gap-3">
-                <Link
-                  href={`/projets/${project.id}`}
-                  className="rounded-lg bg-white px-4 py-2 text-sm font-medium text-slate-950 transition duration-200 hover:bg-slate-100 hover:scale-[1.02] active:scale-[0.98] text-center flex items-center justify-center flex-1"
-                >
-                  Voir projet
-                </Link>
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="github-btn rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-gray-300 transition duration-200 hover:bg-white/10 hover:text-white text-center flex items-center justify-center flex-1"
-                >
-                  Code
-                </a>
+                {(project.category === "Fullstack" || project.category === "UI/UX") && (
+                  <Link
+                    href={`/projets/${project.id}`}
+                    className="rounded-lg bg-white px-4 py-2 text-sm font-medium text-slate-950 transition duration-200 hover:bg-slate-100 hover:scale-[1.02] active:scale-[0.98] text-center flex items-center justify-center flex-1"
+                  >
+                    Voir projet
+                  </Link>
+                )}
+                {project.category === "Backend" && (
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="github-btn rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-gray-300 transition duration-200 hover:bg-white/10 hover:text-white text-center flex items-center justify-center flex-1"
+                  >
+                    Code
+                  </a>
+                )}
               </div>
 
               {/* Subtle background glow hover */}

@@ -16,12 +16,16 @@ export default function Contact() {
 
     setLoading(true);
 
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "";
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "";
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "";
+
     emailjs
       .sendForm(
-        "service_3rqbpkb",    // 🔁 remplace
-        "template_b80hhyj",  // 🔁 remplace
+        serviceId,
+        templateId,
         form.current,
-        "Fq0C83vhTf7s_2uB-"    // 🔁 remplace
+        publicKey
       )
       .then(
         () => {
