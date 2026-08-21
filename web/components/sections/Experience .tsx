@@ -6,7 +6,7 @@ const experiences = [
   {
     title: "Développeur Fullstack (Formation)",
     place: "École 221",
-    date: "2024 - Présent",
+    date: "2023 - Présent",
     description:
       "Apprentissage du développement web et mobile avec réalisation de projets concrets en JavaScript, PHP et bases de données.",
   },
